@@ -81,7 +81,7 @@ class InlineStyle
   def extract_css
     @dom.css('style, link[rel=stylesheet]').collect do |node|
       next unless /^$|screen|all/ === node['media'].to_s
-      node.remove
+      # node.remove
 
       if node.name == 'style'
         node.content 
